@@ -10,7 +10,13 @@ class TweetsController < ApplicationController
   # GET /tweets/1 or /tweets/1.json
   def show
   end
-
+  # GET/ estableciendo metodo search para buscar tweets
+  def search
+    query = params[:query]
+    @tweets = Tweet.where("description LIKE :query OR username LIKE :query", query: "%#{query}%")
+    render "search"
+  end
+  
   # GET /tweets/new
   def new
     @tweet = Tweet.new
@@ -57,7 +63,7 @@ class TweetsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tweet

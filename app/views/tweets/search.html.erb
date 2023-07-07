@@ -1,0 +1,14 @@
+<h1>Resultados de búsqueda</h1>
+
+<% if @tweets.any? %>
+  <ul>
+    <% @tweets.each do |tweet| %>
+      <li>
+        <p><strong>Descripción:</strong> <%= tweet.description %></p>
+        <p><strong>Usuario:</strong> <%= tweet.username %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No se encontraron resultados.</p>
+<% end %>

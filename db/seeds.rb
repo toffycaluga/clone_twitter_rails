@@ -12,7 +12,7 @@ puts "generating test tweets..."
 50.times do
   Tweet.create(
     description: Faker::Lorem.sentence,
-    userName: Faker::Internet.username
+    username: Faker::Internet.username
   )
 end
 puts "test tweets generated successfully"
