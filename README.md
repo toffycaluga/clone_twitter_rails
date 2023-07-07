@@ -4,8 +4,8 @@ Esta es una aplicación web desarrollada con Ruby on Rails que simula el comport
 
 ## Requisitos
 
-- Ruby (versión X.X.X)
-- Ruby on Rails (versión X.X.X)
+- Ruby (versión 3.2.2)
+- Ruby on Rails (versión 7.0.6)
 - PostgreSQL
 
 ## Configuración
